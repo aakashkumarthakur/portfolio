@@ -865,6 +865,11 @@
          const navLinks = document.querySelector(".nav-links");
 
          hamburger.addEventListener("click", () => {
+             window.addEventListener('scroll', () => {
+             if (navLinks.classList.contains('active')) {
+           navLinks.classList.remove('active');
+             }
+            });
           navLinks.classList.toggle("active");
           navLinks.addEventListener("mouseleave", () => {
            navLinks.classList.remove("active");
