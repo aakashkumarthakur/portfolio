@@ -1,0 +1,35 @@
+name: Generate XML Sitemap
+
+on:
+  push:
+    branches:
+      - main  # Agar aapki branch ka naam 'master' hai, toh yahan master likhein
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    name: Generate a sitemap
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0 
+
+    - name: Generate the sitemap
+      id: sitemap
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://thakuraakash.com.np/  # Yahan apni sahi website URL check kar lein
+
+    - name: Output stats
+      run: |
+        echo "sitemap-path: ${{ steps.sitemap.outputs.sitemap-path }}"
+        echo "url-count: ${{ steps.sitemap.outputs.url-count }}"
+
+    - name: Commit and push
+      run: |
+        git config user.name "github-actions"
+        git config user.email "action@github.com"
+        git add sitemap.xml
+        git commit -m "Automated sitemap update" || exit 0
+        git push
