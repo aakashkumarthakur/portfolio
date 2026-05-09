@@ -19,7 +19,7 @@ jobs:
       id: sitemap
       uses: cicirello/generate-sitemap@v1
       with:
-        base-url-path: https://thakuraakash.com.np/  # Yahan apni sahi website URL check kar lein
+        base-url-path: https://thakuraakash.com.np/  
 
     - name: Output stats
       run: |
