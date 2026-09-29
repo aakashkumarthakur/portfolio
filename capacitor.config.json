@@ -1,0 +1,14 @@
+{
+    "appId": "com.aakashthakur.cricketscorer",
+    "appName": "Cricket Scorer",
+    "webDir": "www",
+    "server": {
+        "androidScheme": "https"
+    },
+    "android": {
+        "backgroundColor": "#1a1d23",
+        "allowMixedContent": false,
+        "captureInput": true,
+        "webContentsDebuggingEnabled": false
+    }
+}
