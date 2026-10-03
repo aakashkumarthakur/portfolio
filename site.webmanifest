@@ -1,0 +1,21 @@
+{
+  "name": "MyWebSite",
+  "short_name": "MySite",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png?v=20261003",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png?v=20261003",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#e3d8d8",
+  "background_color": "#ddd4d4",
+  "display": "standalone"
+}
